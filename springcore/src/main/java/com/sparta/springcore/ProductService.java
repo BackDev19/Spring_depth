@@ -5,12 +5,21 @@ import java.util.List;
 
 public class ProductService {
 
+    // 멤버 변수 선언
+    private final ProductRepository productRepository;
+
+    // 생성자: ProductService() 가 생성될 때 호출됨
+    public ProductService() {
+        // 멤버 변수 생성
+        this.productRepository = new ProductRepository();
+    }
+
     public Product createProduct(ProductRequestDto requestDto) throws SQLException {
         // 요청받은 DTO 로 DB에 저장할 객체 만들기
         Product product = new Product(requestDto);
 
-        ProductRepository productRepository = new ProductRepository();
-        productRepository.createProduct(product);
+        // 멤버 변수 사용
+        this.productRepository.createProduct(product);
 
         return product;
     }
@@ -29,7 +38,6 @@ public class ProductService {
     }
 
     public List<Product> getProducts() throws SQLException {
-        ProductRepository productRepository = new ProductRepository();
         List<Product> products = productRepository.getProducts();
 
         return products;
