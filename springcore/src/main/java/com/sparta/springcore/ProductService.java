@@ -1,11 +1,14 @@
 package com.sparta.springcore;
 
-import java.sql.SQLException;
-import java.util.List;
+import org.springframework.stereotype.Component;
 
 import java.sql.SQLException;
 import java.util.List;
 
+import java.sql.SQLException;
+import java.util.List;
+
+@Component
 public class ProductService {
 
     private final ProductRepository productRepository;
