@@ -2,18 +2,6 @@ package com.sparta.springcore;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-
-import java.sql.SQLException;
-import java.util.List;
-
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -24,8 +12,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    public ProductController() {
-        ProductService productService = new ProductService();
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
