@@ -75,7 +75,7 @@ public class UserService {
         // HTTP Body 생성
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("grant_type", "authorization_code");
-        body.add("client_id", "61db540d862894225a4938d0133cb467");
+        body.add("client_id", "4393c85f4c9ed77d6bf6d98831e228f7");
         body.add("redirect_uri", "http://localhost:8080/user/kakao/callback");
         body.add("code", code);
 
@@ -121,6 +121,8 @@ public class UserService {
                 .get("nickname").asText();
         String email = jsonNode.get("kakao_account")
                 .get("email").asText();
+
+        System.out.println("카카오 사용자 정보: " + id + ", " + nickname + ", " + email);
 
         return new KakaoUserInfoDto(id, nickname, email);
     }
