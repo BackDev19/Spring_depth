@@ -1,16 +1,5 @@
 package com.sparta.springcore.service;
 
-import com.sparta.springcore.model.Product;
-import com.sparta.springcore.repository.ProductRepository;
-import com.sparta.springcore.dto.ProductMypriceRequestDto;
-import com.sparta.springcore.dto.ProductRequestDto;
-
-import java.sql.SQLException;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.sparta.springcore.dto.ProductMypriceRequestDto;
 import com.sparta.springcore.dto.ProductRequestDto;
 import com.sparta.springcore.model.Product;
