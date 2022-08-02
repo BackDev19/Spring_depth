@@ -2,6 +2,7 @@ package com.sparta.springcore.service;
 
 import com.sparta.springcore.model.Folder;
 import com.sparta.springcore.model.Product;
+import com.sparta.springcore.model.User;
 import com.sparta.springcore.repository.FolderRepository;
 import com.sparta.springcore.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
